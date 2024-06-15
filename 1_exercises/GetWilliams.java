@@ -25,7 +25,8 @@ public class GetWilliams {
 		
 		// Insert your code here 
 		ArrayList<String> result = new ArrayList();
-
+		//Split each name into two by using the String.split() which will effectively return an array with the strings cut up to each ' ' 
+		//Match the last word which will be the word after the ' ' to 'Williams' and add it to the array if it is the case
 		for (int i =0; i < input.size(); i++) {
 			String[] temp = input.get(i).split(" ");
 			 
