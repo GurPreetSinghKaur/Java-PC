@@ -25,13 +25,16 @@ public class GetFactorials {
 		
 		// Insert your code here
 		for (int i = 0; i < input.size(); i++) {
-			
+			if (input.get(i) <= 1) continue;
 			int factorial = input.get(i);
 			int result = 0;
-			for (int l = factorial; l >= 0; l--) {
+			
+			for (int l = factorial - 1; l > 0; l--) {
 				if (result == 0) {
-					result = (factorial - 1) * l;
-				} else  result += result * l;
+					result = factorial * l;
+				} else {
+					result = result * l;
+				}
 			}
 
 			input.set(i, result);
