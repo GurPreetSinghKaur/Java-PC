@@ -11,7 +11,12 @@ public class GetPugOwners {
 	static ArrayList<String> solve(ArrayList<Dog> input){
 		
 		// Insert your code here to return the names of pug owners
-						
+		ArrayList<String> result = new ArrayList(); 
+
+		for (Dog dog : input) {
+			if(dog.breed.equals("Pug")) result.add(dog.owner);
+		}
+						return result;
 	}
 	
 	public static void main(String[] args) {
