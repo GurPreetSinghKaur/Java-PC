@@ -21,7 +21,30 @@ public class GetWordLengths {
 	static ArrayList<Integer> solve(String input){
 		
 		// Insert your code here to return the lengths of each word in the string
-						
+		ArrayList<Integer> tempResult = new ArrayList();
+		
+		if (input.length() < 1) {
+			return tempResult;
+		} else {
+			tempResult.add(0);
+		}
+
+
+		int currentIndex = 0;
+		for (int i = 0; i < input.length(); i++) {
+		 
+			
+			if (input.charAt(i) != ' ') {
+				tempResult.set(currentIndex,tempResult.get(currentIndex) +1 );
+			}
+			else if (input.charAt(i) == ' ') {
+				currentIndex++;
+				tempResult.add(0);
+			}
+			
+
+		}
+						return tempResult;
 	}
 	
 	public static void main(String[] args) {
