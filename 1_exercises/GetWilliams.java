@@ -24,7 +24,14 @@ public class GetWilliams {
 	static ArrayList<String> solve(ArrayList<String> input){
 		
 		// Insert your code here 
-						
+		ArrayList<String> result = new ArrayList();
+
+		for (int i =0; i < input.size(); i++) {
+			String[] temp = input.get(i).split(" ");
+			 
+			if (temp[1].equals("Williams")) result.add(input.get(i));
+		}
+	return result;					
 	}
 	
 	public static void main(String[] args) {
