@@ -16,7 +16,7 @@ public class GetPalindromes {
 		
 		for (int i = 0; i < input.size(); i++) {
 			StringBuilder sb = new StringBuilder(input.get(i));
-
+			//reverse the stringBuilder, then reverse the string, finally check if it is the same as the original string.
 			if (sb.reverse().toString().equals(input.get(i))) result.add(input.get(i)); 
 			
 		}
