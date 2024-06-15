@@ -22,7 +22,6 @@ Examples:
 public class GetFactorials {
 	
 	static ArrayList<Integer> solve(ArrayList<Integer> input){
-		
 		// Insert your code here
 		for (int i = 0; i < input.size(); i++) {
 			if (input.get(i) <= 1) continue;
