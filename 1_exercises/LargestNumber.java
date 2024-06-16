@@ -14,10 +14,32 @@ Examples:
 public class LargestNumber {
 	
 	static int solve(int input){
-		
-		// Insert your code here
-						
-	}
+  
+    // Insert your code here
+    
+if (input < 10) return input;
+String intString = input+"";
+char[] charArray = intString.toCharArray();
+
+     for (int i = 0; i < charArray.length; i++) {
+       for (int k = i + 1; k < charArray.length; k++)
+         {if (charArray[i] < charArray[k]) {
+           //swap 
+           char swap = charArray[i];
+           charArray[i] = charArray[k];
+           charArray[k] = swap; 
+         }}
+         
+     }
+intString = "";
+     for (char digit : charArray){
+       intString += digit;
+     }
+     
+     
+     return Integer.parseInt(intString);
+
+  }
 	
 	public static void main(String[] args) {
 
