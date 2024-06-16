@@ -16,8 +16,10 @@ public class LargestNumber {
 	static int solve(int input){
   
     // Insert your code here
-    
+    //if the number is less than 10 it means it is a single digit and cannot be re-arranged
 if (input < 10) return input;
+
+		//create an array of these numbers and use bubble sort. |Arrays.sort() is also useful
 String intString = input+"";
 char[] charArray = intString.toCharArray();
 
