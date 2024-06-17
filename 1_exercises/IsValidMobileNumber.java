@@ -26,19 +26,17 @@ Examples:
  public class IsValidMobileNumber {
 	
 	static boolean solve(String input){
-		
 		// Insert your code here
-		// System.out.println(input.matches(".*0.*") + input);
 		//Check if the input has valid minimum length and if it matches the allowed characters
+		//When using String.matches(), add .* at the beginning and the end in order to check substrings 
 		if (input.length() < 10 | input.matches(".*[^+0-9].*"))  return false;
-
+		
+		//better performance instead of declaring this line at the beginning
 		String[] temp = input.split("7");
 
 		if (temp[0].contains("0") | temp[0].contains("+44") | temp[0].contains("0044")) return true;
 
-		return false;
-		
-						
+		return false;			
 	}
 	
 	public static void main(String[] args) {
