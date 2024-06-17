@@ -39,8 +39,11 @@ public class LocateWrongFruit {
 	static int solve(ArrayList<String> input){
 		
 		// Insert your code here 
-		//apple:{0,1,2,3}
-		//apl:3
+		//Use a HashMap in order to record all the indexes for each unique string. 
+		//At the end loop through until we find only one occurrence and return its index
+		//apple:{0,1,2,4}
+		//apl:{3} -> length is 1 therefore we return its index 3
+
 		HashMap<String, List<Integer>> map = new HashMap();
 
 		for (int i =0;i<input.size(); i++){
