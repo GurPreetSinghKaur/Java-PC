@@ -28,9 +28,9 @@ Examples:
 	static boolean solve(String input){
 		
 		// Insert your code here
-
+		// System.out.println(input.matches(".*0.*") + input);
 		//Check if the input has valid minimum length and if it matches the allowed characters
-		if (input.length() < 10 | ! input.matches("//Q+.?//E[0-9]"))  return false;
+		if (input.length() < 10 | input.matches(".*[^+0-9].*"))  return false;
 
 		String[] temp = input.split("7");
 
