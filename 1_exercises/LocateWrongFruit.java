@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.HashMap;
+import java.util.stream.Collectors;
+import java.util.stream.*;
 
 /* 
 This function takes a list of fruit in the format:
@@ -36,6 +39,24 @@ public class LocateWrongFruit {
 	static int solve(ArrayList<String> input){
 		
 		// Insert your code here 
+		//apple:{0,1,2,3}
+		//apl:3
+		HashMap<String, List<Integer>> map = new HashMap();
+
+		for (int i =0;i<input.size(); i++){
+
+		map.put(input.get(i), map.getOrDefault(input.get(i), new ArrayList<>())  )	;
+		map.get(input.get(i)).add(i);
+
+
+		}
+
+		for (var entrySet : map.entrySet()) {
+			if (entrySet.getValue().size() == 1) return entrySet.getValue().get(0);
+		}
+
+	//	System.out.println(map);
+		return 0;
 						
 	}
 	
