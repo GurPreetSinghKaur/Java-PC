@@ -24,6 +24,11 @@ public class TallyHashtagsAndMentions {
 	static Map<String, Integer> solve(String input){
 		
 		// Insert your code here to return the the number of hashtags and mentions
+
+		//Use a HashMap and K : V pair
+		//Use String.indexOf() in order to check if a match is found and if it is then updated occurrence from HashMap
+
+		
 		HashMap<String, Integer> map = new HashMap();
 		boolean mention = true;
 		boolean hashtag = true;
@@ -42,7 +47,6 @@ public class TallyHashtagsAndMentions {
 				map.put("hashtags",map.get("hashtags") +1);
 			} else hashtag = false;
 
- 
 		}
 		return map;
 	}
