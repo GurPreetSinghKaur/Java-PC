@@ -16,7 +16,7 @@ It should display "SUCCESS" when you run it without further changes.
 public class SplitString {
 	
 	/* FIX THIS METHOD */	
-	static char[] solve(){		
+	static char[] solve(String input){		
 		if (input == null) {
 			return new char[0];
 	}
