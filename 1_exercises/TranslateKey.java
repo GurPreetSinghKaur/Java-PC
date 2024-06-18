@@ -11,13 +11,18 @@ and convert it to a student's data in English.
 In particular, the member "prénom" needs translating to "name" on the EnglishStudent.
   
  */
+import java.util.stream.*;
+import java.util.stream.Collectors;
+
+import java.util.*;
 
 public class TranslateKey {
 	
 	static EnglishStudent solve(FrenchStudent input){
 		
 		// Insert your code here to convert the FrenchStudent to an EnglishStudent
-						
+	List<EnglishStudent> list =	Stream.of(input).map(x -> new EnglishStudent(x.prénom,x.age,x.location)).collect(Collectors.toList());
+						return list.get(0);													        	  
 	}
 	
 	public static void main(String[] args) {
