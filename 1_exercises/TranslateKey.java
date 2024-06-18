@@ -21,6 +21,8 @@ public class TranslateKey {
 	static EnglishStudent solve(FrenchStudent input){
 		
 		// Insert your code here to convert the FrenchStudent to an EnglishStudent
+		//Use a stream of FrenchStudent object. Stream will first map the object from FrenchStudent into EnglishStudent 
+		//Then collect it as a list of <EnglishStudent> and return the first EnglishObject object from the list  
 	List<EnglishStudent> list =	Stream.of(input).map(x -> new EnglishStudent(x.prénom,x.age,x.location)).collect(Collectors.toList());
 						return list.get(0);													        	  
 	}
