@@ -21,13 +21,8 @@ compile and print success for all the original inputs when you're done.
 	static int solve(String[] groceries){		
 
 		// This entire method could be replaced with a single line, and no looping required.
-		int totalPrice = 0;
 		
-		for (int i = 0; i < groceries.length; i++) {				
-				totalPrice += 10;
-		}
-
-		return totalPrice;
+		return groceries.length * 10;
 	}
 	
 	public static void main(String[] args) {
