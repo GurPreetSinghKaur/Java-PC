@@ -23,7 +23,8 @@ that allows all possible lists that we saw in Part One.)
 public class GetFirstItemPartTwo {
 	
 	/* FIX THIS METHOD */	
-	static String solve(ArrayList<String> input){		
+	static String solve(ArrayList<String> input){	
+		if (input.size() < 1) return null;	
 		String firstItem = input.get(0);
 		return firstItem;
 	}
