@@ -31,10 +31,13 @@ public class MatchDNAPairs {
 	static ArrayList<String> solve(String input){
 		
 		// Insert your code here
+		//Use a HashMap and add K : V pair 
+		//Loop through each character to check if it is in the hashmap then add its value to the ArrayList
 		 ArrayList<String> result = new ArrayList();
-
 		 HashMap<Character,String> hashMap = new HashMap();
-		input = input.toUpperCase();
+
+		 //Make the String upper case
+		 input = input.toUpperCase();
 		 hashMap.put('G',"GC");
 		 hashMap.put('C',"CG");
 		 hashMap.put('T',"TA");
