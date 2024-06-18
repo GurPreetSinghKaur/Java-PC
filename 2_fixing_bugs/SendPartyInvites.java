@@ -17,7 +17,8 @@ Can you find and fix the bug in the `solve` method? Do not change the inputs.
 public class SendPartyInvites {
 	
 	/* FIX THIS METHOD */	
-	static List<String> solve(List<String> friends){		
+	static List<String> solve(List<String> friends){	
+
 		List<String> invitedFriends = new ArrayList<>();
 
 		for (String friend : friends) {
@@ -26,7 +27,7 @@ public class SendPartyInvites {
 				}
 		}
 		
-		return friends;
+		return invitedFriends;
 	}
 	
 	public static void main(String[] args) {
