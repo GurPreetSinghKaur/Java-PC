@@ -25,7 +25,7 @@ public class GetFirstItemPartOne {
 	/* FIX THIS METHOD */	
 	static <T> T solve(ArrayList<T> input){		
 		T firstItem = input.get(0);
-		return firstitem;
+		return firstItem;
 	}
 	
 	public static void main(String[] args) {
