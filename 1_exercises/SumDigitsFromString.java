@@ -27,10 +27,10 @@ Examples:
 		// Insert your code here
 		int result = 0;
 		//Use regex in order to check if each single character matches to a number from 0 to 9
-		//In case it matches, add it to the result variable;
+		//In case it matches, add it to the result
 		for (int i = 0 ; i < input.length(); i++) {
 			String temp = input.charAt(i)+""; 
-			if (temp.matches("[0-9]")) result += Integer.parseInt(temp);  
+			if (temp.matches(".*[0-9].*")) result += Integer.parseInt(temp);  
 		}
 
 		return result;

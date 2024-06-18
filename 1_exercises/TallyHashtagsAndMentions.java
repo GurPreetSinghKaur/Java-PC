@@ -1,4 +1,5 @@
 import java.util.Map;
+import java.util.*;
 /* 
 
 This function receives a tweet String that will contain a number of mentions and
@@ -23,7 +24,27 @@ public class TallyHashtagsAndMentions {
 	static Map<String, Integer> solve(String input){
 		
 		// Insert your code here to return the the number of hashtags and mentions
-						
+		HashMap<String, Integer> map = new HashMap();
+		boolean mention = true;
+		boolean hashtag = true;
+		map.put("mentions", 0);
+		map.put("hashtags", 0);
+
+		while (mention | hashtag) {
+
+			if (mention && input.indexOf('@') != -1) {
+			input =	input.replaceFirst ("@", "");
+				map.put("mentions",map.get("mentions") +1);
+			} else mention = false;
+
+			if (hashtag && input.indexOf('#') != -1) {
+			input =	input.replaceFirst("#", "");
+				map.put("hashtags",map.get("hashtags") +1);
+			} else hashtag = false;
+
+ 
+		}
+		return map;
 	}
 	
 	public static void main(String[] args) {
