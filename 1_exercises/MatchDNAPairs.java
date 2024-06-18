@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.HashMap; 
+import java.util.Map;
 
 /* 
 This function takes a string of DNA, such as 'GTCA', and returns a list
@@ -28,7 +30,23 @@ public class MatchDNAPairs {
 	
 	static ArrayList<String> solve(String input){
 		
-		// Insert your code here 
+		// Insert your code here
+		 ArrayList<String> result = new ArrayList();
+
+		 HashMap<Character,String> hashMap = new HashMap();
+		input = input.toUpperCase();
+		 hashMap.put('G',"GC");
+		 hashMap.put('C',"CG");
+		 hashMap.put('T',"TA");
+		 hashMap.put('A',"AT");
+
+		String temp = "";
+		for (int i = 0; i < input.length(); i++) {
+			if (hashMap.containsKey(input.charAt(i))) result.add(hashMap.get(input.charAt(i)));
+		}
+	
+		  
+	return result;
 						
 	}
 	
@@ -61,4 +79,3 @@ public class MatchDNAPairs {
 	}
 
 }
-
