@@ -23,7 +23,7 @@ public class SumEvenNumbers {
         }
 
         int sum = 0;
-        for (int i = start; i <= end; i += 2) {
+        for (int i = start; i <= end; i++) {
             if (i % 2 == 0) {  // Check if the number is even
                 sum += i;       // Add the even number to the sum
             }
