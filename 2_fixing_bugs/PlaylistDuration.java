@@ -22,8 +22,10 @@ public class PlaylistDuration {
 	static int solve(List<Song> allSongs) {
 		int totalDuration = 0;
 
-		for (Song song : allSongs) {							
-			totalDuration += song.getLength();			
+		for (Song song : allSongs) {	
+		//totalDuration should only record the songs which are in playlist
+		if (song.getIsInPlaylist())	totalDuration += song.getLength();		
+
 		}
 
 		return totalDuration;
