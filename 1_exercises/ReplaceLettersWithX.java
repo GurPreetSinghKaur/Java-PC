@@ -25,6 +25,7 @@ public class ReplaceLettersWithX {
 	static String solve(String input){
 		
 		// Insert your code here
+		return input.replaceAll("[A-Za-z]", "X");
 						
 	}
 	
