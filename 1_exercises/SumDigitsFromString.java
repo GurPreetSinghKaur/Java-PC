@@ -25,6 +25,14 @@ Examples:
 	static int solve(String input){
 		
 		// Insert your code here
+		int result = 0;
+
+		for (int i = 0 ; i < input.length(); i++) {
+			String temp = input.charAt(i)+""; 
+			if (temp.matches(".*[0-9].*")) result += Integer.parseInt(temp);  
+		}
+
+		return result;
 						
 	}
 	
