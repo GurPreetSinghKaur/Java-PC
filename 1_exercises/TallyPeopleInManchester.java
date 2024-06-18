@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.*;
 /* 
 
 Write a function that takes an ArrayList<Person> and
@@ -12,8 +13,9 @@ public class TallyPeopleInManchester {
 	static int solve(ArrayList<Person> input){
 		
 		// Insert your code here to return the count of people who live in Manchester
-						
-	}
+
+		 return (int)(long) input.stream().filter( x -> x.city == "Manchester" ).count(); 					
+					}
 	
 	public static void main(String[] args) {
 
