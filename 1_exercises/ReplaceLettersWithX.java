@@ -23,8 +23,9 @@ Examples:
 public class ReplaceLettersWithX {
 	
 	static String solve(String input){
-		
 		// Insert your code here
+		//Use Regex in replaceAll() method in order to match all the alphabets from A to Z and a to z.
+		//replace all matching arguments with "X" 
 		return input.replaceAll("[A-Za-z]", "X");
 						
 	}
