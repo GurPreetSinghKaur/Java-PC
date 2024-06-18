@@ -13,7 +13,7 @@ public class TallyPeopleInManchester {
 	static int solve(ArrayList<Person> input){
 		
 		// Insert your code here to return the count of people who live in Manchester
-
+		//Use a filter() from the stream function in order to filter only Person.city which are equals to "Manchester"
 		 return (int)(long) input.stream().filter( x -> x.city == "Manchester" ).count(); 					
 					}
 	
