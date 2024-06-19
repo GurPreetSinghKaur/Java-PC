@@ -15,40 +15,45 @@ HINT: If you get stuck, you can look at the `MessyCalculatorPartialSolution.java
  */
 
 public class MessyCalculator {
+    //one method to show the menu
+    //We need one method to get the input
+    //one method to add, another for substract.... 
     
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        double result = 0;
-
-        System.out.println("Simple Calculator");
-        System.out.println("Enter first number:");
-        double num1 = scanner.nextDouble();
-        System.out.println("Enter second number:");
-        double num2 = scanner.nextDouble();
-
-        System.out.println("Select operation: 1. Add  2. Subtract  3. Multiply  4. Divide");
-        int choice = scanner.nextInt();
-
-        if (choice == 1) {
-            result = num1 + num2;
-            System.out.println("Result: " + result);
-        } else if (choice == 2) {
-            result = num1 - num2;
-            System.out.println("Result: " + result);
-        } else if (choice == 3) {
-            result = num1 * num2;
-            System.out.println("Result: " + result);
-        } else if (choice == 4) {
-            if (num2 != 0) {
-                result = num1 / num2;
-                System.out.println("Result: " + result);
+        start();
+    }
+    private static void add(double a, double b) {
+         System.out.println("Result: " + a+b);
+    }
+     private static void multiply(double a, double b) {
+         System.out.println("Result: " + a*b);
+    }
+     private static void subtract(double a, double b) {
+         System.out.println("Result: " + (a - b));
+    }
+     private static void divide(double a, double b) {
+        if (a != 0) {
+                System.out.println("Result: " + a / b);
             } else {
                 System.out.println("Error: Cannot divide by zero.");
             }
-        } else {
-            System.out.println("Invalid choice. Please choose a valid operation.");
+    }
+    static void start() {
+        double num1 = getUserInput("Simple Calculator\nEnter first number:");
+        double num2 = getUserInput("Enter second number:");
+        int choice = (int)(double)getUserInput("Select operation: 1. Add  2. Subtract  3. Multiply  4. Divide"); 
+     
+        switch (choice) {
+        case 1:add(num1,num2);break;
+        case 2:subtract(num1,num2);break;
+        case 3:multiply(num1,num2);break;
+        case 4:divide(num1,num2); break;
+        default:System.out.println("Invalid choice. Please choose a valid operation."); 
         }
-
-        scanner.close();
+    }
+    static double getUserInput (String output) {
+        System.out.println(output);
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextDouble();
     }
 }
