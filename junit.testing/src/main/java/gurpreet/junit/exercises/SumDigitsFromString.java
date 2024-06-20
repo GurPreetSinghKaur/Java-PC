@@ -1,4 +1,5 @@
-/* 
+package gurpreet.junit.exercises;
+/*
 
 Write a function that takes a String and adds all the numbers in the
 string together.

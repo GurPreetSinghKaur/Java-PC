@@ -1,4 +1,6 @@
-/* 
+package gurpreet.junit.exercises;
+
+/*
 Write a function that takes an integer and returns the largest number that can
 be made by rearranging the digits.
 

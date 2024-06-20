@@ -1,4 +1,5 @@
-/* 
+package gurpreet.junit.exercises;
+/*
 
 Write a function that takes a String of a mobile number.
 It should return `true` if the number is a valid UK number and `false` if not.

@@ -1,3 +1,5 @@
+package gurpreet.junit.exercises;
+
 import java.util.Arrays;
 import java.util.Objects;
 import java.util.ArrayList;
@@ -46,13 +48,4 @@ public class FindFirstDentist {
 
 }
 
-class Person {
-	public String name;
-	public boolean isDentist;
-	
-	Person(String name, boolean isDentist){
-		this.name = name;
-		this.isDentist = isDentist;
-		
-	}
-}
+

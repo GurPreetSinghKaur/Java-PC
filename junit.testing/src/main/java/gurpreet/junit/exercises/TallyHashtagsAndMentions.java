@@ -1,3 +1,4 @@
+package gurpreet.junit.exercises;
 import java.util.Map;
 import java.util.*;
 /* 

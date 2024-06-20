@@ -20,7 +20,7 @@ public class FlipBooleans {
 		
 	}
 	
-	public static void start (String[] args) {
+	public static void start () {
 
 		tryInput(new boolean[]{ true, false, false, true}, new boolean[]{ false, true, true, false});
 		tryInput(new boolean[]{ false, false, false, false, false}, new boolean[]{ true, true, true, true, true});

@@ -1,4 +1,5 @@
-/* 
+package gurpreet.junit.exercises;
+/*
 
 Northcoders are expanding to France!
 
