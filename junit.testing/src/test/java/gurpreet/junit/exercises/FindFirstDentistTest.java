@@ -7,8 +7,10 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 
 public class FindFirstDentistTest {
-	
-
+	//need to change from strung to person object
+@ParameterizedTest
+@ValueSource(strings = ("",""))
+public void findFirstDentistTest(){}
 
 }
 
