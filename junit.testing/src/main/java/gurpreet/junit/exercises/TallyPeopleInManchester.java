@@ -1,7 +1,6 @@
 package gurpreet.junit.exercises;
 import java.util.Arrays;
 import java.util.ArrayList;
-import java.util.*;
 /* 
 
 Write a function that takes an ArrayList<Person> and
@@ -39,19 +38,3 @@ public class TallyPeopleInManchester {
 
 }
 
-class Person {
-	public String name;
-	public boolean isDentist;
-	public String city;
-	
-	Person(String name, String city, boolean isDentist){
-		this.name = name;
-		this.city = city;
-		this.isDentist = isDentist;
-		
-	}
-	Person (String name, boolean isDentist){
-		this.name = name;
-		this.isDentist = isDentist;
-	}
-}
