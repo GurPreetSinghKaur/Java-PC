@@ -11,12 +11,18 @@ public class FindFirstDentistTest {
 
  private static Stream<Arguments> listOfPerson() {
         return Stream.of(
-                Arguments.of(),
+		 Arguments.of(new ArrayList<>(), null),
+		 Arguments.of(new ArrayList<Person>(Arrays.asList(new Person("Callum", false))), null),
+		 Arguments.of(new ArrayList<Person>(Arrays.asList(new Person("Callum", false), new Person("Diane", false))), null),
+		 Arguments.of(new ArrayList<Person>(Arrays.asList(new Person("Callum", false), new Person("Diane", false), new Person("Egbert", true))), "Egbert"),
+		 Arguments.of(new ArrayList<Person>(Arrays.asList(new Person("Callum", false), new Person("Diane", false), new Person("Egbert", true), new Person("Francesco", true))), "Egbert")
+	}
+
 
         );
     }
 @ParameterizedTest
-@ValueSource(strings = ("",""))
+@MethodSource(strings = ("listOfPerson")
 public void findFirstDentistTest(){}
 
 }
