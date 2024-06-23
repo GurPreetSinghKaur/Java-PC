@@ -44,26 +44,6 @@ public class GetFactorials {
 		}
 
 		return input; 
-						
-	}
-	
-	public static void main(String[] args) {
 
-		tryInput(new ArrayList<>(), new ArrayList<>());
-		tryInput(new ArrayList<>(List.of(4)), new ArrayList<>(List.of(24)));
-		tryInput(new ArrayList<>(List.of(3,4)), new ArrayList<>(List.of(6,24)));
-		tryInput(new ArrayList<>(List.of(3)), new ArrayList<>(List.of(6)));
-		tryInput(new ArrayList<>(List.of(1,5,2)), new ArrayList<>(List.of(1,120,2)));
-		
 	}
-
-	static void tryInput(ArrayList<Integer> input, ArrayList<Integer> expectedOutput){
-		ArrayList<Integer> result = GetFactorials.solve(input);
-		if(result.equals(expectedOutput)){
-			System.out.println("✅ SUCCESS");
-		}else{
-			System.out.println("❌ FAILED");
-		}
-	}
-
 }
