@@ -23,7 +23,7 @@ public class FindFirstDentistTest {
     }
 @ParameterizedTest
 @MethodSource(strings = ("listOfPerson")
-public void findFirstDentistTest(){}
-AssertArraysEqual(,);
+public void findFirstDentistTest(ArrayList<Person> a, ArrayList<Person> b){}
+        assertArrayEquals(FindFirstDentist.solve(a), b);
 }
 
