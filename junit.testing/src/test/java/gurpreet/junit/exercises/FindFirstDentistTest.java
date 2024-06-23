@@ -8,6 +8,13 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class FindFirstDentistTest {
 	//need to change from strung to person object
+
+ private static Stream<Arguments> listOfPerson() {
+        return Stream.of(
+                Arguments.of(),
+
+        );
+    }
 @ParameterizedTest
 @ValueSource(strings = ("",""))
 public void findFirstDentistTest(){}
