@@ -24,6 +24,12 @@ public class FindFirstDentistTest {
 @ParameterizedTest
 @MethodSource(strings = ("listOfPerson")
 public void findFirstDentistTest(){}
+// Insert your code here to return the name of the first dentist in the list
+		for (Person p : input) {
+			//Get the first dentist name
+			if(p.isDentist) return p.name;
+		}
 
+		return null;
 }
 
