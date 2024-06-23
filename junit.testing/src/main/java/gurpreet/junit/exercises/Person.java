@@ -1,6 +1,6 @@
 package gurpreet.junit.exercises;
 
-class Person {
+public class Person {
     public String name;
     public boolean isDentist;
     public String city;
