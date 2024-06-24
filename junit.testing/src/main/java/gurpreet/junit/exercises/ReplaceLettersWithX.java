@@ -30,25 +30,4 @@ public class ReplaceLettersWithX {
 		return input.replaceAll("[A-Za-z]", "X");
 						
 	}
-	
-	public static void main(String[] args) {
-
-		tryInput("", "");
-		tryInput("a", "X");
-		tryInput("A", "X");
-		tryInput("hello", "XXXXX");
-		tryInput("Hello!", "XXXXX!");
-		tryInput("Do you like coding?", "XX XXX XXXX XXXXXX?");
-	
-	}
-
-	static void tryInput(String input, String expectedOutput){
-		String result = ReplaceLettersWithX.solve(input);
-		if(result.equals(expectedOutput)){
-			System.out.println("✅ SUCCESS");
-		}else{
-			System.out.println("❌ FAILED");
-		}
-	}
-
 }
