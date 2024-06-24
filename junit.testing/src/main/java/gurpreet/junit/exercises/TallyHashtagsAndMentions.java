@@ -51,26 +51,4 @@ public class TallyHashtagsAndMentions {
 		}
 		return map;
 	}
-	
-	public static void main(String[] args) {
-
-		tryInput("So excited to start at @northcoders on Monday! #learntocode #codingbootcamp", Map.of("mentions", 1, "hashtags", 2));
-		tryInput("So excited to start at @northcoders on Monday! #codingbootcamp", Map.of("mentions", 1, "hashtags", 1));
-		tryInput("Hey @coolperson! You should come join a #codingbootcamp @northcoders", Map.of("mentions", 2, "hashtags", 1));
-		tryInput("Having a nice sandwich for lunch", Map.of("mentions", 0, "hashtags", 0));
-		tryInput("Having a nice sandwich for lunch #whocares #lunch #sandwich #icare #hashtag", Map.of("mentions", 0, "hashtags", 5));
-		tryInput("", Map.of("mentions", 0, "hashtags", 0));
-
-
-	}
-
-	static void tryInput(String input, Map<String,Integer> expectedOutput){
-		Map<String,Integer> result = TallyHashtagsAndMentions.solve(input);
-		if(result.equals(expectedOutput)){
-			System.out.println("✅ SUCCESS");
-		}else{
-			System.out.println("❌ FAILED");
-		}
-	}
-
 }
