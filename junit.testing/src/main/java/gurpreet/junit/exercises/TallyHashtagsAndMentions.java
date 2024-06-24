@@ -28,8 +28,6 @@ public class TallyHashtagsAndMentions {
 
 		//Use a HashMap and K : V pair
 		//Use String.indexOf() in order to check if a match is found and if it is then updated occurrence from HashMap
-
-		
 		HashMap<String, Integer> map = new HashMap();
 		boolean mention = true;
 		boolean hashtag = true;
