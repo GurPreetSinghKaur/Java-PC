@@ -36,24 +36,6 @@ public class GetWilliams {
 	return result;					
 	}
 	
-	public static void main(String[] args) {
-
-		tryInput(new ArrayList<>(), new ArrayList<>());
-		tryInput(new ArrayList<>(List.of("David Williams")), new ArrayList<>(List.of("David Williams")));
-		tryInput(new ArrayList<>(List.of("David Williams", "Sarah Williams")), new ArrayList<>(List.of("David Williams", "Sarah Williams")));
-		tryInput(new ArrayList<>(List.of("Kirsty February")), new ArrayList<>());
-		tryInput(new ArrayList<>(List.of("Kirsty February", "Sam Williams")), new ArrayList<>(List.of("Sam Williams")));
-		tryInput(new ArrayList<>(List.of("William David", "Cole Williamson", "Williams Jameson")), new ArrayList<>());
-	}
-
-	static void tryInput(ArrayList<String> input, ArrayList<String> expectedOutput){
-		ArrayList<String> result = GetWilliams.solve(input);
-		if(result.equals(expectedOutput)){
-			System.out.println("✅ SUCCESS");
-		}else{
-			System.out.println("❌ FAILED");
-		}
-	}
 
 }
 
