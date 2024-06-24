@@ -27,7 +27,7 @@ public class ReplaceLettersWithXTest {
     }
 @ParameterizedTest
 @MethodSource("listOfValues")
-@DisplayName("Returns a List containing correctly matched DNA pairs")
+@DisplayName("Returns a String with all of the letter characters replaced with an 'X'")
 public void replaceLettersWithXTest(String input, String expectedOutput){
 	//Assertions.assertSame(ReplaceLettersWithX.solve(input), expectedOutput);
 	Assertions.assertThat(ReplaceLettersWithX.solve(input)).isEqualTo(expectedOutput);
