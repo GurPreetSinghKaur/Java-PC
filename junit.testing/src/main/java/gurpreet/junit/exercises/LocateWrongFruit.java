@@ -35,7 +35,6 @@ Examples:
 
 
  */
-
 public class LocateWrongFruit {
 	
 	static int solve(ArrayList<String> input){
@@ -45,45 +44,16 @@ public class LocateWrongFruit {
 		//At the end loop through until we find only one occurrence and return its index
 		//apple:{0,1,2,4}
 		//apl:{3} -> length is 1 therefore we return its index 3
-
 		HashMap<String, List<Integer>> map = new HashMap();
-
 		for (int i =0;i<input.size(); i++){
-
 		map.put(input.get(i), map.getOrDefault(input.get(i), new ArrayList<>())  )	;
 		map.get(input.get(i)).add(i);
-
-
 		}
-
 		for (var entrySet : map.entrySet()) {
 			if (entrySet.getValue().size() == 1) return entrySet.getValue().get(0);
 		}
-
 	//	System.out.println(map);
 		return 0;
-						
-	}
-	
-	public static void main(String[] args) {
-
-		tryInput(new ArrayList<>(), 0);
-		tryInput(new ArrayList<>(List.of("apple", "apple", "apple", "apple", "elppa", "apple")), 4);
-		tryInput(new ArrayList<>(List.of("apple", "apple", "elppa")), 2);
-		tryInput(new ArrayList<>(List.of("apple", "elppa", "apple")), 1);
-		tryInput(new ArrayList<>(List.of("banana", "ananab", "banana", "banana")), 1);
-		tryInput(new ArrayList<>(List.of("ananab", "ananab", "banana", "ananab")), 2);
-		tryInput(new ArrayList<>(List.of("apple", "elppa")), 0);
-		
-	}
-
-	static void tryInput(ArrayList<String> input, int expectedOutput){
-		int result = LocateWrongFruit.solve(input);
-		if(result == expectedOutput){
-			System.out.println("✅ SUCCESS");
-		}else{
-			System.out.println("❌ FAILED");
-		}
 	}
 
 }
