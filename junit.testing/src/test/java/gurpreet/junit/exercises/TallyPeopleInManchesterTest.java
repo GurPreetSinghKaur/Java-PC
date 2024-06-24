@@ -25,8 +25,7 @@ public class TallyPeopleInManchesterTest {
     }
 @ParameterizedTest
 @MethodSource("listOfValues")
-@DisplayName("Returns a Map<String, Integer> describing the number of hashtags and\n" +
-		"mentions found in the string")
+@DisplayName("Returns the count of people who have their city set to Manchester.")
 public void tallyPeopleInManchesterTest(ArrayList<Person> input, int  expectedOutput){
 	Assertions.assertThat(TallyPeopleInManchester.solve(input)).isEqualTo(expectedOutput);
 }
