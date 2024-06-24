@@ -36,26 +36,5 @@ Examples:
 		return result;
 						
 	}
-	
-	public static void main(String[] args) {
-
-		tryInput("", 0);
-		tryInput("1", 1);
-		tryInput("168", 15);
-		tryInput("+he12ll3", 6);
-		tryInput("northcoders", 0);
-		tryInput("01010101", 4);
-		tryInput("x0d1e0t1s0a1g0e1", 4);
-	
-	}
-
-	static void tryInput(String input, int expectedOutput){
-		int result = SumDigitsFromString.solve(input);
-		if(result == expectedOutput){
-			System.out.println("✅ SUCCESS");
-		}else{
-			System.out.println("❌ FAILED");
-		}
-	}
 
 }
