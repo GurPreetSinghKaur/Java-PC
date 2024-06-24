@@ -39,25 +39,4 @@ Examples:
 
 		return false;			
 	}
-	
-	public static void main(String[] args) {
-
-		tryInput("", false);
-		tryInput("07726", false);
-		tryInput("07123456789", true);
-		tryInput("+447123456789", true);
-		tryInput("00447123456789", true);
-		tryInput("0712345678!", false);
-		tryInput("07123456789!", false);			
-	}
-
-	static void tryInput(String input, boolean expectedOutput){
-		boolean result = IsValidMobileNumber.solve(input);
-		if(result == expectedOutput){
-			System.out.println("✅ SUCCESS");
-		}else{
-			System.out.println("❌ FAILED");
-		}
-	}
-
 }
