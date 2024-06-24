@@ -48,38 +48,6 @@ public class MatchDNAPairs {
 		for (int i = 0; i < input.length(); i++) {
 			if (hashMap.containsKey(input.charAt(i))) result.add(hashMap.get(input.charAt(i)));
 		}
-	
-		  
 	return result;
-						
 	}
-	
-	public static void main(String[] args) {
-
-		tryInput("", new ArrayList<>());
-		tryInput("G", new ArrayList<>(List.of("GC")));
-		tryInput("C", new ArrayList<>(List.of("CG")));
-		tryInput("T", new ArrayList<>(List.of("TA")));
-		tryInput("A", new ArrayList<>(List.of("AT")));
-		tryInput("g", new ArrayList<>(List.of("GC")));
-		tryInput("c", new ArrayList<>(List.of("CG")));
-		tryInput("t", new ArrayList<>(List.of("TA")));
-		tryInput("a", new ArrayList<>(List.of("AT")));
-		
-		tryInput("GAT", new ArrayList<>(List.of("GC", "AT", "TA")));
-		tryInput("GYTC", new ArrayList<>(List.of("GC", "TA", "CG")));
-		tryInput("gat", new ArrayList<>(List.of("GC", "AT", "TA")));
-		tryInput("gxat", new ArrayList<>(List.of("GC", "AT", "TA")));	
-		
-	}
-
-	static void tryInput(String input, ArrayList<String> expectedOutput){
-		ArrayList<String> result = MatchDNAPairs.solve(input);
-		if(result.equals(expectedOutput)){
-			System.out.println("✅ SUCCESS");
-		}else{
-			System.out.println("❌ FAILED");
-		}
-	}
-
 }
