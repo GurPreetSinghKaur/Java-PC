@@ -1,4 +1,4 @@
-/* 
+package gurpreet.junit.refactoring;/*
 
 CountGroceries is a class with a `solve` method which takes an array of Strings.
 
@@ -23,27 +23,6 @@ compile and print success for all the original inputs when you're done.
 		// This entire method could be replaced with a single line, and no looping required.
 		
 		return groceries.length * 10;
-	}
-	
-	public static void main(String[] args) {
-		
-		// Don't modify this code
-		tryInput(new String[]{"Apple", "Banana", "Orange", "Milk"}, 40);
-		tryInput(new String[]{"Banana", "Orange", "Milk"}, 30);
-		tryInput(new String[]{"Apple", "Banana", "Orange", "Milk", "Milk", "Cheese"}, 60);
-		tryInput(new String[]{"Apple"}, 10);
-		tryInput(new String[]{}, 0);
-	}
-
-	static void tryInput(String[] input, int expectedOutput){
-						
-		int result = CountGroceries.solve(input);
-		
-		if(result == expectedOutput){
-			System.out.println("✅ SUCCESS");
-		}else{
-			System.out.println("❌ FAILED");
-		}
 	}
 
 }

@@ -1,3 +1,5 @@
+package gurpreet.junit.refactoring;
+
 import java.util.Scanner;
 
 /* 
