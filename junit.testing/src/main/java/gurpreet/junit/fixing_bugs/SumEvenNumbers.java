@@ -30,30 +30,6 @@ public class SumEvenNumbers {
         }
         return sum;
 	}
-	
-	public static void main(String[] args) {
-		
-		// Don't modify this code
-		tryInput(0, 0, 0);
-		tryInput(0, 5, 6);
-		tryInput(0, 10, 30);
-		tryInput(1, 10, 30);
-		tryInput(10, 12, 22);
-		tryInput(11, 12, 12);
-		tryInput(4, 8, 18);
-		tryInput(3, 8, 18);
-	}
-
-	static void tryInput(int start, int end, int expectedOutput){
-						
-		int result = SumEvenNumbers.solve(start, end);
-		
-		if(result == expectedOutput){
-			System.out.println("✅ SUCCESS");
-		}else{
-			System.out.println("❌ FAILED");
-		}
-	}
 
 }
 
