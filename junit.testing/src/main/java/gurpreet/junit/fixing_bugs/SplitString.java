@@ -23,13 +23,13 @@ public class SplitString {
 			return new char[0];
 	}
 
-	char[] charArray = new char[input.length()];
+//	char[] charArray = new char[input.length()];
+//
+//	for (int i = 0; i < input.length(); i++) {
+//			charArray[i] = input.charAt(i);
+//	}
 
-	for (int i = 0; i < input.length(); i++) {
-			charArray[i] = input.charAt(i);
-	}
-
-	return charArray;
+	return input.toCharArray();
 	}
 	
 	public static void main(String[] args) {
