@@ -21,7 +21,7 @@ public class SplitStringTest {
     }
 @ParameterizedTest
 @MethodSource("listOfValues")
-@DisplayName("Returns a list of only friends with even length names")
+@DisplayName("Returns a char array of the String input")
 public void splitStringTest(String input, char [] expectedOutput){
 	Assertions.assertThat(SplitString.solve(input)).isEqualTo(expectedOutput);
 }

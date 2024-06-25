@@ -31,27 +31,6 @@ public class SplitString {
 
 	return input.toCharArray();
 	}
-	
-	public static void main(String[] args) {
-		
-		// Don't modify this code
-		tryInput(null, new char[0]);
-		tryInput("banana", new char[]{'b', 'a', 'n', 'a', 'n', 'a'});
-		tryInput("apple", new char[]{'a', 'p', 'p', 'l', 'e'});
-		tryInput("cake", new char[]{'c', 'a', 'k', 'e'});
-				
-	}
-
-	static void tryInput(String input, char[] expectedOutput){
-						
-		char[] result = SplitString.solve(input);
-		
-		if(Arrays.equals(result, expectedOutput)){
-			System.out.println("✅ SUCCESS");
-		}else{
-			System.out.println("❌ FAILED");
-		}
-	}
 
 }
 
