@@ -1,3 +1,5 @@
+package gurpreet.junit.fixing_bugs;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -27,24 +29,6 @@ public class GetFirstItemPartTwo {
 		if (input.size() < 1) return null;	
 		String firstItem = input.get(0);
 		return firstItem;
-	}
-	
-	public static void main(String[] args) {
-		
-		// Don't modify this code
-		tryInput(new ArrayList<>(), null);
-		tryInput(new ArrayList<>(List.of("apple", "orange", "banana", "pomegranate")), "apple");
-		tryInput(new ArrayList<>(List.of("banana", "orange", "apple", "pomegranate")), "banana");
-				
-	}
-
-	static void tryInput(ArrayList<String> input, String expectedOutput){
-		String result = GetFirstItemPartTwo.solve(input);
-		if(Objects.equals(result, expectedOutput)){
-			System.out.println("✅ SUCCESS");
-		}else{
-			System.out.println("❌ FAILED");
-		}
 	}
 
 }

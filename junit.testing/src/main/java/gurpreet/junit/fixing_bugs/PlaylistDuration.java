@@ -1,3 +1,5 @@
+package gurpreet.junit.fixing_bugs;
+
 import java.util.List;
 
 /* 
@@ -55,35 +57,6 @@ public class PlaylistDuration {
 				return length;
 		}
 }
-
-	public static void main(String[] args) {
-		
-		// Don't modify this code
-		var s1 = new Song("Song1", 180, true);
-		var s2 = new Song("Song2", 240, true);
-		var s3 = new Song("Song3", 210, false);
-		var s4 = new Song("Song4", 300, true);
-		var s5 = new Song("Song5", 190, false);		
-		tryInput(List.of(s1), 180);		
-		tryInput(List.of(s2), 240);		
-		tryInput(List.of(s1,s2,s4), 720);		
-		tryInput(List.of(s1,s2,s4,s4), 1020);		
-		tryInput(List.of(s2,s3,s4), 540);		
-		tryInput(List.of(s1,s2,s4,s4,s1,s2), 1440);		
-		tryInput(List.of(s1,s2,s3,s4,s5), 720);		
-		
-	}
-
-	static void tryInput(List<Song> input, int expectedOutput){
-						
-		int result = PlaylistDuration.solve(input);
-		
-		if(result == expectedOutput){
-			System.out.println("✅ SUCCESS");
-		}else{
-			System.out.println("❌ FAILED");
-		}
-	}
 
 }
 

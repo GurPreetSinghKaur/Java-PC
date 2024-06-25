@@ -1,7 +1,7 @@
 package gurpreet.junit.fixing_bugs;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 /* 
 PART ONE:
@@ -25,26 +25,9 @@ String AND int lists. We'll explore the power of this syntax later in the bootca
 public class GetFirstItemPartOne {
 	
 	/* FIX THIS METHOD */	
-	static <T> T solve(ArrayList<T> input){		
+	public static <T> T solve(ArrayList<T> input){
 		T firstItem = input.get(0);
 		return firstItem;
-	}
-	
-	public static void main(String[] args) {
-		
-		tryInput(new ArrayList<>(List.of("apple", "orange", "banana", "pomegranate")), "apple");
-		tryInput(new ArrayList<>(List.of("banana", "orange", "apple", "pomegranate")), "banana");
-		tryInput(new ArrayList<>(List.of(2, 3, 4, 5)), 2);
-		
-	}
-
-	static <T> void tryInput(ArrayList<T> input, T expectedOutput){
-		T result = GetFirstItemPartOne.solve(input);
-		if(result.equals(expectedOutput)){
-			System.out.println("✅ SUCCESS");
-		}else{
-			System.out.println("❌ FAILED");
-		}
 	}
 
 }

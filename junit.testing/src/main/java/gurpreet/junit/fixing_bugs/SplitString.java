@@ -1,3 +1,5 @@
+package gurpreet.junit.fixing_bugs;
+
 import java.util.Arrays;
 
 /* 

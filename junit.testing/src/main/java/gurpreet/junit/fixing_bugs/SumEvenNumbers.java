@@ -1,4 +1,4 @@
-/* 
+package gurpreet.junit.fixing_bugs;/*
 
 SumEvenNumbers is a class with a `solve` method which takes two integers - start and end.
 It then sums up all the even numbers in the range between start and end 

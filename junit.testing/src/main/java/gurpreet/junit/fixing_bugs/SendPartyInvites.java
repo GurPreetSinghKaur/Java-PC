@@ -1,3 +1,5 @@
+package gurpreet.junit.fixing_bugs;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -28,27 +30,6 @@ public class SendPartyInvites {
 		}
 		
 		return invitedFriends;
-	}
-	
-	public static void main(String[] args) {
-		
-		// Don't modify this code
-		tryInput(List.of("Alice", "Bob", "Charlie", "David"), new ArrayList<String>());
-		tryInput(List.of("Paul", "Bob", "Charlie", "David"), List.of("Paul"));
-		tryInput(List.of("Paul", "John", "George", "Ringo"), List.of("Paul", "John", "George"));
-		tryInput(List.of("Jurgen", "Virgil", "Luis", "Darwin"), List.of("Jurgen", "Virgil", "Luis", "Darwin"));
-		
-	}
-
-	static void tryInput(List<String> input, List<String> expectedOutput){
-						
-		List<String> result = SendPartyInvites.solve(input);
-		
-		if(result.equals(expectedOutput)){
-			System.out.println("✅ SUCCESS");
-		}else{
-			System.out.println("❌ FAILED");
-		}
 	}
 
 }
